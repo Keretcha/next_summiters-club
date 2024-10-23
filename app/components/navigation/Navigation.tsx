@@ -57,7 +57,7 @@ const Navigation = () => {
 
           if (item.title === "Contact Us") {
             return (
-              <NavItem href={"item.route"} onClick={handleContactClick} key={item.title} as="div" style={{ cursor: "pointer" }}>
+              <NavItem href={item.route} onClick={handleContactClick} key={item.title} as="div" style={{ cursor: "pointer" }}>
                 {item.title}
               </NavItem>
             );
