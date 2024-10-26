@@ -13,7 +13,7 @@ export const ImageTextWrapper = styled.div<ImageTextWrapperType>`
   width: 35rem;
   margin-left: 1rem;
   @media (min-width: 768px) {
-    flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+    flex-direction: ${({ reverse }: { reverse?: ImageTextWrapperType }) => (reverse ? "row-reverse" : "row")};
     justify-content: space-between;
     width: unset;
     margin-left: unset;

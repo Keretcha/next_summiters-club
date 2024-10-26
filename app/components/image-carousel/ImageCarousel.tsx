@@ -7,6 +7,7 @@ import {
   DisplayContainer,
 } from "./style";
 import { nextIcon, previousIcon } from "../../images";
+import Image from "next/image"; // Importing the Image component from Next.js
 
 type ImageCarouselProps = {
   imageArray: string[];
@@ -26,26 +27,30 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ imageArray }) => {
       prevIndex === 0 ? imageArray.length - 1 : prevIndex - 1
     );
   };
+
   return (
     <div>
       <DisplayContainer>
         <ImageCarouselWrapper>
-          <img
-            loading="lazy"
-            style={{ width: "6rem", height: "6rem", cursor: "pointer" }}
+          <Image
+            width={60}
+            height={60}
+            style={{ cursor: "pointer" }}
             onClick={onPreviousButtonClick}
             src={previousIcon}
             alt="previous"
           />
-          <img
-            loading="lazy"
-            style={{ width: "60rem" }}
+          <Image
+            width={600} // Adjust based on your design
+            height={400} // Adjust based on your design
             src={imageArray[currentImageIndex]}
             alt="current"
+            priority // Optional: Use priority for important images
           />
-          <img
-            loading="lazy"
-            style={{ width: "6rem", height: "6rem", cursor: "pointer" }}
+          <Image
+            width={60}
+            height={60}
+            style={{ cursor: "pointer" }}
             onClick={onNextButtonClick}
             src={nextIcon}
             alt="next"
@@ -59,16 +64,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ imageArray }) => {
           loading="lazy"
         />
         <IconsWrapper>
-          <img
-            loading="lazy"
-            style={{ width: "6rem", height: "6rem", cursor: "pointer" }}
+          <Image
+            width={60}
+            height={60}
+            style={{ cursor: "pointer" }}
             onClick={onPreviousButtonClick}
             src={previousIcon}
             alt="previous"
           />
-          <img
-            loading="lazy"
-            style={{ width: "6rem", height: "6rem", cursor: "pointer" }}
+          <Image
+            width={60}
+            height={60}
+            style={{ cursor: "pointer" }}
             onClick={onNextButtonClick}
             src={nextIcon}
             alt="next"

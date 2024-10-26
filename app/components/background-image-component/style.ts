@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Typography from "../typography/Typography";
 
 type BackgroundImageCompWrapperProps = {
-  imageUrl: string;
+  imgUrl: string;
 };
 
 export const BackgroundImageCompWrapper = styled.div<BackgroundImageCompWrapperProps>`
-  background-image: url(${({ imageUrl }) => (imageUrl ? imageUrl : undefined)});
+  background-image: url(${({ imgUrl }: BackgroundImageCompWrapperProps) => imgUrl});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,7 +1,7 @@
 "use client";
 import { useTexts } from "../../hooks/useTexts";
 import { everestBaseCamp1, everestBaseCamp2, everestBaseCampBackgroundImage, lobucheAndEverest, lobucheAndEverest2 } from "../../images";
-import ToursPage from "../tours-page-component/ToursPage";
+import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
 
 const EverestBaseCamp = () => {

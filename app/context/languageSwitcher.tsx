@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useState, useContext, Dispatch, SetStateAction } from "react";
+import React, { createContext, useState, useContext, Dispatch, SetStateAction, ReactNode } from "react";
 
 export enum Languages {
   EN = "EN",
@@ -13,7 +13,7 @@ type LanguageContextType = {
 };
 
 type languageProviderType = {
-  children: any;
+  children: ReactNode;
 };
 
 const LanguageContext = createContext<LanguageContextType>({

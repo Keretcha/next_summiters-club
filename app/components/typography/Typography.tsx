@@ -13,11 +13,11 @@ export type TypographyProps = {
 };
 
 const StyledText = styled.span<TypographyProps>`
-  font-size: ${({ fontSize }) => fontSize || "inherit"};
-  font-weight: ${({ fontWeight }) => fontWeight || "normal"};
-  color: ${({ color }) => color || "inherit"};
-  line-height: ${({ lineHeight }) => lineHeight || "inherit"};
-  text-align: ${({ textAlign }) => textAlign || "left"};
+  font-size: ${({ fontSize }:TypographyProps) => fontSize || "inherit"};
+  font-weight: ${({ fontWeight }:TypographyProps) => fontWeight || "normal"};
+  color: ${({ color }:TypographyProps) => color || "inherit"};
+  line-height: ${({ lineHeight }:TypographyProps) => lineHeight || "inherit"};
+  text-align: ${({ textAlign }:TypographyProps) => textAlign || "left"};
 `;
 
 const Typography: React.FC<TypographyProps> = ({ children, as = "span", fontSize, fontWeight, color, lineHeight, textAlign, className }) => {
