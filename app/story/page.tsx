@@ -1,12 +1,12 @@
 "use client";
-import BackgroundImageComp from "../../components/background-image-component/BackgroundImageComp";
-import BoardMembers from "../../components/board-members/BoardMembers";
-import ImageText from "../../components/image-text-component/ImageText";
-import { MaxContentWrapper } from "../../components/max-content-wrapper/MaxContentWrapper";
-import PartnersInAdvanture from "../../components/partnets-in-advanture/PartnersInAdvanture";
-import Typography from "../../components/typography/Typography";
-import { useTexts } from "../../hooks/useTexts";
-import { imageTextFirst, imageTextSecond, imageTextThird, storyBackgroundImage } from "../../images";
+import BackgroundImageComp from "../components/background-image-component/BackgroundImageComp";
+import BoardMembers from "../components/board-members/BoardMembers";
+import ImageText from "../components/image-text-component/ImageText";
+import { MaxContentWrapper } from "../components/max-content-wrapper/MaxContentWrapper";
+import PartnersInAdvanture from "../components/partnets-in-advanture/PartnersInAdvanture";
+import Typography from "../components/typography/Typography";
+import { useTexts } from "../hooks/useTexts";
+import { storyBackgroundImage, imageTextFirst, imageTextSecond, imageTextThird } from "../images";
 import { StoryMissionPageWrapper, BottomSectionTexts, ColoredTypography } from "./style";
 
 const AboutUsPage = () => {
