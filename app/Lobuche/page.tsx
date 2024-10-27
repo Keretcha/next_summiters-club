@@ -1,8 +1,10 @@
 "use client";
-import { useTexts } from "../../hooks/useTexts";
-import { lobucheAndEverest, lobucheAndEverest2, lobucheBackgroundImage, lobucheImage1, lobucheImage2, lobucheImage3, lobucheImage4 } from "../../images";
+
+import { useTexts } from "../hooks/useTexts";
+import { lobucheImage1, lobucheImage2, lobucheImage3, lobucheImage4, lobucheAndEverest, lobucheAndEverest2, lobucheBackgroundImage } from "../images";
 import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
+
 
 const LobuchePage = () => {
   const text = useTexts();
