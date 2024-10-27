@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Burger, Menu, Nav, SubMenu, SubMenuItem, Expeditions } from "./style";
+import Link from "next/link";
 
 type BurgerMenuProps = {
   isScrolled?: boolean;
@@ -31,10 +32,10 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isScrolled }) => {
             Expeditions {isDropdownOpen ? "▲" : "▼"}
           </Expeditions>
           <SubMenu isOpen={isDropdownOpen}>
-            <SubMenuItem href="/amaDablam">Amadablam</SubMenuItem>
-            <SubMenuItem href="/Lobuche">Lobuche</SubMenuItem>
-            <SubMenuItem href="/islandPeak">Island Peak</SubMenuItem>
-            <SubMenuItem href="/everestBaseCamp">Everest base camp</SubMenuItem>
+            <Link href={"/amaDablam"}><SubMenuItem>Amadablam</SubMenuItem></Link>
+            <Link href={"/Lobuche"}><SubMenuItem>Lobuche</SubMenuItem></Link>
+            <Link href={"/islandPeak"}><SubMenuItem >Island Peak</SubMenuItem></Link>
+            <Link href={"/everestBaseCamp"}><SubMenuItem>Everest base camp</SubMenuItem></Link>
           </SubMenu>
         </div>
         <a href="/story">Our Story & Mission</a>

@@ -1,19 +1,19 @@
 "use client";
 import { useState, useRef } from "react";
-import BackgroundImageComp from "../../components/background-image-component/BackgroundImageComp";
-import DayByDay from "../../components/day-by-day/DayByDay";
-import ExpeditionInfo from "../../components/expedition-info-component/ExpeditionInfo";
-import IconText from "../../components/icon-text/IconText";
-import ImageCarousel from "../../components/image-carousel/ImageCarousel";
-import { MaxContentWrapper } from "../../components/max-content-wrapper/MaxContentWrapper";
-import Typography from "../../components/typography/Typography";
-import { useTexts } from "../../hooks/useTexts";
+import BackgroundImageComp from "../components/background-image-component/BackgroundImageComp";
+import DayByDay from "../components/day-by-day/DayByDay";
+import ExpeditionInfo from "../components/expedition-info-component/ExpeditionInfo";
+import IconText from "../components/icon-text/IconText";
+import ImageCarousel from "../components/image-carousel/ImageCarousel";
+import { MaxContentWrapper } from "../components/max-content-wrapper/MaxContentWrapper";
+import Typography from "../components/typography/Typography";
+import { useTexts } from "../hooks/useTexts";
 
 import { ToursPageWrapper, ToursPageSectionFirst, Description, DescriptionFirst, ToursPageSectionSecond, ToursPageSectionThird, ToursPageSectionFour, MoreInfoWrapper, MoreInfoTitles, InfoTitles, CustomTypography, DayByDayContainer } from "./style";
 
 // Define types for props
 interface DayByDayItem {
-  day: string; // Adjust type as necessary
+  day: string;
   task: string;
 }
 
@@ -31,7 +31,7 @@ type DataTypeProps = {
   description: string;
 };
 
-type ToursPageProps = {
+type ToursPagePropsType = {
   dayByDay: DayByDayItem[];
   includedServices: IncludedService[];
   excludedExpences: ExcludedExpense[];
@@ -49,10 +49,9 @@ type ToursPageProps = {
   longData?: boolean;
 };
 
-const ToursPage: React.FC<ToursPageProps> = ({ dayByDay = [], includedServices = [], excludedExpences = [], imagesArray = [], backgroundImage, pageTitle, firstSectionTitle, firstSectionDescriptionFirst, firstSectionDescriptionSecond, expeditionInfoData = [], seasonDuration, seasonPrice, expeditionInfoDescription, sectionSecondTitle, longData }) => {
+const ToursPage: React.FC<ToursPagePropsType> = ({ dayByDay = [], includedServices = [], excludedExpences = [], imagesArray = [], backgroundImage, pageTitle, firstSectionTitle, firstSectionDescriptionFirst, firstSectionDescriptionSecond, expeditionInfoData = [], seasonDuration, seasonPrice, expeditionInfoDescription, sectionSecondTitle, longData }) => {
   const text = useTexts();
   const bottomRef = useRef<HTMLDivElement | null>(null);
-
   const leftColumnData = dayByDay.slice(0, 6);
   const rightColumnData = dayByDay.slice(6);
   const leftColumnDataLong = dayByDay.slice(0, 10);

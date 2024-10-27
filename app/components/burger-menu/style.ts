@@ -37,24 +37,30 @@ export const Burger = styled.div<BurgerProps>`
   div {
     width: 2.1rem;
     height: 0.25rem;
-    background-color: ${({ isScrolled }) => (isScrolled ? "#39aab2" : "#fff")};
+    background-color: ${({ isScrolled }: { isScrolled:BurgerProps}) =>
+      isScrolled ? "#39aab2" : "#fff"};;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     &:nth-child(1) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
+       transform: ${({ isOpen }: { isOpen: BurgerProps}) =>
+        isOpen ? "rotate(45deg)" : "rotate(0)"};
+    }
     }
 
     &:nth-child(2) {
-      opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
-      transform: ${({ isOpen }) =>
+     opacity: ${({ isOpen }: { isOpen: BurgerProps }) => (isOpen ? "0" : "1")};
+      transform: ${({ isOpen }: { isOpen: BurgerProps }) =>
         isOpen ? "translateX(20px)" : "translateX(0)"};
     }
 
     &:nth-child(3) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
+       transform: ${({ isOpen }: { isOpen: BurgerProps }) =>
+        isOpen ? "rotate(-45deg)" : "rotate(0)"};
+    }
+  };
     }
   }
 `;
@@ -69,7 +75,8 @@ export const Menu = styled.div<{ isOpen: boolean }>`
   right: 0;
   height: 100vh;
   width: 300px;
-  transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
+   transform: ${({ isOpen }: { isOpen: BurgerProps}) =>
+    isOpen ? "translateX(0)" : "translateX(100%)"};;
   transition: transform 0.3s ease-in-out;
   z-index: 9; /* Ensure the menu appears above other content */
 
@@ -92,8 +99,8 @@ export const SubMenu = styled.div<{ isOpen: boolean }>`
   flex-direction: column;
   background-color: #444;
   padding-left: 1.5rem;
-  max-height: ${({ isOpen }) =>
-    isOpen ? "500px" : "0"}; /* Maximum height to expand smoothly */
+ max-height: ${({ isOpen }: { isOpen: BurgerProps }) =>
+    isOpen ? "500px" : "0"} /* Maximum height to expand smoothly */
   overflow: hidden; /* Hide overflow when closed */
   transition: max-height 0.4s ease-in-out; /* Smooth transition for opening */
 `;

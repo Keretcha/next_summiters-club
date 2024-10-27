@@ -13,7 +13,8 @@ export const HeaderWrapper = styled.div<HeaderWrapperProps>`
   width: 100%;
   top: 0;
   transition: background-color 0.3s ease;
-  background-color: ${({ isScrolled }) => (isScrolled ? "white" : "transparent")};
+  background-color: ${({ isScrolled }: { isScrolled: HeaderWrapperProps }) =>
+    isScrolled ? "white" : "transparent"};
   z-index: 99;
   padding: 2rem 0;
   @media (min-width: 768px) {
@@ -29,7 +30,7 @@ export const FlexWrapper = styled.div`
 
 export const LanguageSwitcherItem = styled.p<HeaderWrapperProps>`
   font-size: 1.4rem;
-  color: ${({ isScrolled }) => (isScrolled ? "black" : "white")};
+  color: ${({ isScrolled }: { isScrolled: HeaderWrapperProps }) => (isScrolled ? "black" : "white")};
   cursor: pointer;
 `;
 

@@ -1,18 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { useTexts } from "../../hooks/useTexts";
-import {
-  islandPeak1,
-  islandPeak2,
-  islandPeak3,
-  islandPeak4,
-  islandPeakBackgroundImage,
-  lobucheImage1,
-  lobucheImage2,
-  lobucheImage3,
-  lobucheImage4,
-} from "../../images";
-import ToursPage from "../tours-page-component/ToursPage";
+
+import { useTexts } from "../hooks/useTexts";
+import { islandPeak1, islandPeak2, islandPeak3, islandPeak4, islandPeakBackgroundImage } from "../images";
+import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
+
 
 const IslandPeak = () => {
   const text = useTexts();
@@ -190,66 +181,10 @@ const IslandPeak = () => {
     },
   ];
 
-  const imagesArray = [
-    islandPeak1,
-    islandPeak2,
-    islandPeak3,
-    islandPeak4,
-  ];
+  const imagesArray = [islandPeak1, islandPeak2, islandPeak3, islandPeak4];
 
   return (
     <>
-      <Helmet>
-        <title>Island Peak Expedition | Summiters Club</title>
-        <meta
-          name="description"
-          content="Summiters Club guides you on an unforgettable Island Peak expedition. Ideal for climbers seeking adventure in the Himalayas."
-        />
-        <link rel="canonical" href="https://summitersclub.com/islandPeak " />
-
-        <meta
-          property="og:title"
-          content="Island Peak Expedition | Summiters Club"
-        />
-        <meta
-          property="og:description"
-          content="Explore Island Peak with Summiters Club. A challenging climb in the Himalayas, perfect for adventurers ready to summit a 6000-meter peak."
-        />
-        <meta
-          property="og:image"
-          content="https://summitersclub.com/images/island1.webp"
-        />
-        <meta
-          property="og:url"
-          content="https://summitersclub.com/islandPeak "
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Island Peak Expedition | Summiters Club"
-        />
-        <meta
-          name="twitter:description"
-          content="Climb Island Peak with professional guides. Experience the thrill of summiting this Himalayan gem."
-        />
-        <meta
-          name="twitter:image"
-          content="https://summitersclub.com/images/island1.webp"
-        />
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "TouristAttraction",
-            name: "Island Peak Expedition",
-            description:
-              "Summiters Club guides you on an unforgettable Island Peak expedition.",
-            url: "https://summitersclub.com/islandPeak ",
-            image: "https://summitersclub.com/images/island1.webp",
-          })}
-        </script>
-      </Helmet>
       <ToursPage
         dayByDay={dayByDay}
         includedServices={includedServices}

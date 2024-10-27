@@ -1,9 +1,9 @@
 "use client";
 
-import ToursPage from "../tours-page-component/ToursPage";
-import { useTexts } from "../../hooks/useTexts";
+import { useTexts } from "../hooks/useTexts";
+import { amaDablamBackgroundImage, amaDablamImage1, amaDablamImage2, amaDablamImage3, amaDablamImage4, amaDablamImage5, amaDablamImage6, amaDablamImage7, amaDablamImage8, amaDablamImage9 } from "../images";
+import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
-import { amaDablamBackgroundImage, amaDablamImage1, amaDablamImage2, amaDablamImage3, amaDablamImage4, amaDablamImage5, amaDablamImage6, amaDablamImage7, amaDablamImage8, amaDablamImage9 } from "../../images";
 
 const AmaDablamPageView = () => {
   const text = useTexts();

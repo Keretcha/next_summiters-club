@@ -22,7 +22,7 @@ type navItemProps = {
 
 export const NavItem = styled(Link)<navItemProps>`
   text-decoration: none;
-  // color: ${({ isScrolled }) => (isScrolled ? "#333" : colors.whiteColor)};
+  // color: ${({ isScrolled }: { isScrolled?: navItemProps }) => (isScrolled ? "#333" : colors.whiteColor)};;
   font-size: 1.6rem;
   :&hover  {
     color: ${colors.secondaryColor};

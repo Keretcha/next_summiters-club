@@ -14,21 +14,21 @@ type ButtonProps = {
 const StyledButton = styled.button<ButtonProps>`
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
-  color: ${({ primary }) => (primary ? "white" : "white")};
+  color: ${({ primary }: { primary?: ButtonProps }) => (primary ? "white" : "white")};
   border: none;
-  background-color: ${({ primary }) => (primary ? "#78B8FF" : "#78B8FF")};
-  border: 1px solid ${({ primary }) => (primary ? "unset" : "white")};
+  background-color: ${({ primary }: { primary?: ButtonProps }) => (primary ? "#78B8FF" : "#78B8FF")};
+  border: 1px solid ${({ primary }: { primary?: ButtonProps }) => (primary ? "unset" : "white")};
   border-radius: 1px;
   cursor: pointer;
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
+  opacity: ${({ disabled }: { disabled?: ButtonProps }) => (disabled ? 0.5 : 1)};
+  pointer-events: ${({ disabled }: { disabled?: ButtonProps }) => (disabled ? "none" : "auto")};
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
 
   &:hover {
-    background-color: ${({ primary }) => (primary ? "unset" : "unset")};
-    color: ${({ primary }) => (primary ? "#333" : colors.whiteColor)};
+    background-color: ${({ primary }: { primary?: ButtonProps }) => (primary ? "unset" : "unset")};
+    color: ${({ primary }: { primary?: ButtonProps }) => (primary ? "#333" : colors.whiteColor)};
     border: 1px solid ${colors.whiteColor};
     cursor: pointer;
   }
