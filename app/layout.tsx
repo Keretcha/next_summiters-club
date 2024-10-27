@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header/Header";
+// import Footer from "./components/footer/Footer";
 import { LanguageProvider } from "./context/languageSwitcher";
-import Footer from "./components/footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +32,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </LanguageProvider>
       </body>
     </html>
