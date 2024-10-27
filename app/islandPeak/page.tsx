@@ -1,13 +1,9 @@
-import { useTexts } from "../../hooks/useTexts";
-import {
-  islandPeak1,
-  islandPeak2,
-  islandPeak3,
-  islandPeak4,
-  islandPeakBackgroundImage,
-} from "../../images";
+
+import { useTexts } from "../hooks/useTexts";
+import { islandPeak1, islandPeak2, islandPeak3, islandPeak4, islandPeakBackgroundImage } from "../images";
 import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
+
 
 const IslandPeak = () => {
   const text = useTexts();

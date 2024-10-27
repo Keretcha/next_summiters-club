@@ -1,17 +1,17 @@
 "use client";
-
 import { useRouter } from "next/navigation";
-import BackgroundImageComp from "../../components/background-image-component/BackgroundImageComp";
-import ImageBox from "../../components/image-box/ImageBox";
-import { MaxContentWrapper } from "../../components/max-content-wrapper/MaxContentWrapper";
-import ReviewComponent from "../../components/review-component/ReviewComponent";
-import Typography from "../../components/typography/Typography";
-import { useTexts } from "../../hooks/useTexts";
-import { amadablamImageForBackground, backgroundVideo, imageBoxImageFour, imageBoxImageOne, imageBoxImageSecond, imageBoxImageThree } from "../../images";
+import BackgroundImageComp from "../components/background-image-component/BackgroundImageComp";
+import BackgroundVideoComp from "../components/background-video/BackgroundVIdeoComp";
+import ImageBox from "../components/image-box/ImageBox";
+import { MaxContentWrapper } from "../components/max-content-wrapper/MaxContentWrapper";
+import ReviewComponent from "../components/review-component/ReviewComponent";
+import Typography from "../components/typography/Typography";
+import { useTexts } from "../hooks/useTexts";
+import { imageBoxImageOne, imageBoxImageSecond, imageBoxImageThree, imageBoxImageFour, backgroundVideo, amadablamImageForBackground } from "../images";
 import { userData } from "./data";
-import { HomePageSectionSecond, Wrapper, SectionSecondHeadingWrapper, SectionSecondHeading, SectionSecondDescription, BoxesWrapper, HomePageReviewSection, HomePageReviewSectionHeadingWrapper } from "./style";
+import { HomePageSectionSecond, SectionSecondHeadingWrapper, SectionSecondHeading, SectionSecondDescription, BoxesWrapper, HomePageReviewSection, HomePageReviewSectionHeadingWrapper, Wrapper } from "./style";
 
-import BackgroundVideoComp from "../../components/background-video/BackgroundVIdeoComp";
+
 
 const HomePage = () => {
   // const [isScrolling, setIsScrolling] = useState(false); // To track manual scroll

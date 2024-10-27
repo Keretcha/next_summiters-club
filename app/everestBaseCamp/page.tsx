@@ -1,6 +1,6 @@
 "use client";
-import { useTexts } from "../../hooks/useTexts";
-import { everestBaseCamp1, everestBaseCamp2, everestBaseCampBackgroundImage, lobucheAndEverest, lobucheAndEverest2 } from "../../images";
+import { useTexts } from "../hooks/useTexts";
+import { lobucheAndEverest, lobucheAndEverest2, everestBaseCamp1, everestBaseCamp2, everestBaseCampBackgroundImage } from "../images";
 import ToursPage from "../tours-page-component/page";
 import { data } from "./data";
 

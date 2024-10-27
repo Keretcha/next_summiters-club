@@ -1,5 +1,6 @@
-import { englishTexts } from "../../config/texts";
-import { user1, user2, user3, user4, userGirl } from "../../images";
+import { englishTexts } from "../config/texts";
+import { user1, userGirl, user2, user3, user4 } from "../images";
+
 
 export const userData = [
   {

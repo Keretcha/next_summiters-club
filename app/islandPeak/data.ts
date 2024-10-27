@@ -1,11 +1,5 @@
-import {
-  dailyActivityIcon,
-  dificultyIcon,
-  durationIcon,
-  locationIcon,
-  mission,
-  mountainIcon,
-} from "../../images";
+import { dailyActivityIcon, dificultyIcon, durationIcon, locationIcon, mission, mountainIcon } from "../images";
+
 
 export const data = [
   {

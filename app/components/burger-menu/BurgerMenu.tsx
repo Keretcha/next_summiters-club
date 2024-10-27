@@ -32,10 +32,10 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isScrolled }) => {
             Expeditions {isDropdownOpen ? "▲" : "▼"}
           </Expeditions>
           <SubMenu isOpen={isDropdownOpen}>
-            <Link href={"/amadablam"}><SubMenuItem>Amadablam</SubMenuItem></Link>
-            <Link href={"/lobuche"}><SubMenuItem>Lobuche</SubMenuItem></Link>
-            <Link href={"/islandpeak"}><SubMenuItem >Island Peak</SubMenuItem></Link>
-            <Link href={"/everest"}><SubMenuItem>Everest base camp</SubMenuItem></Link>
+            <Link href={"/amaDablam"}><SubMenuItem>Amadablam</SubMenuItem></Link>
+            <Link href={"/Lobuche"}><SubMenuItem>Lobuche</SubMenuItem></Link>
+            <Link href={"/islandPeak"}><SubMenuItem >Island Peak</SubMenuItem></Link>
+            <Link href={"/everestBaseCamp"}><SubMenuItem>Everest base camp</SubMenuItem></Link>
           </SubMenu>
         </div>
         <a href="/story">Our Story & Mission</a>
