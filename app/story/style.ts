@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Typography from "../../components/typography/Typography";
+import Typography from "../components/typography/Typography";
 
 export const StoryMissionPageWrapper = styled.div``;
 
